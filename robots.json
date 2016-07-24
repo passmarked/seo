@@ -1,0 +1,104 @@
+[
+
+  {
+
+    "name": "Facebook",
+    "agents": [
+
+      "facebookexternalhit/1.1",
+      "Facebot/1.1"
+
+    ],
+    "key": "facebook"
+
+  },
+  {
+
+    "name": "Google",
+    "agents": [
+
+      "Googlebot/2.1"
+
+    ],
+    "key": "google"
+
+  },
+  {
+
+    "name": "Googlebot Feature Phone",
+    "agents": [
+
+      "Googlebot-Mobile/2.1"
+
+    ],
+    "key": "googlefeature"
+
+  },
+  {
+
+    "name": "Bing",
+    "agents": [
+
+      "bingbot/2.0"
+
+    ],
+    "key": "bing"
+
+  },
+  {
+
+    "name": "MSNBot",
+    "agents": [
+
+      "msnbot/2.0b"
+
+    ],
+    "key": "msnbot"
+
+  },
+  {
+
+    "name": "MSNBot-Media",
+    "agents": [
+
+      "msnbot-media/1.1"
+
+    ],
+    "key": "msnbotmedia"
+
+  },
+  {
+
+    "name": "AdIdxBot",
+    "agents": [
+
+      "adidxbot/1.1"
+
+    ],
+    "key": "adidxbot"
+
+  },
+  {
+
+    "name": "BingPreview",
+    "agents": [
+
+      "BingPreview/1.0b"
+
+    ],
+    "key": "bingpreview"
+
+  },
+  {
+
+    "name": "Yahoo!",
+    "agents": [
+
+      "Yahoo! Slurp"
+
+    ],
+    "key": "yahoo"
+
+  }
+
+]
