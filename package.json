@@ -7,6 +7,10 @@
     "test": "NODE_ENV=testing mocha"
   },
   "author": "Passmarked <devops@passmarked.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:passmarked/seo.git"
+  },
   "keywords": [
     "html",
     "passmarked",
