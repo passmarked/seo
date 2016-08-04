@@ -9,13 +9,14 @@ const testFunc      = require('../lib/rules/protocol');
 describe('protocol', function() {
 
   // handle the error output
-  it('Should return if http:// is being served too while accessing with https://', function(done) {
+  it('Should return a problem if the alt version is throwing a 501', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
 
-      url:                'http://example.com',
-      testingStatusCode:  200
+      url:                'https://example.com',
+      testingStatusCode:  501,
+      testingRequestUrl:  'http://example.com'
 
     }, null, '')
 
@@ -32,7 +33,47 @@ describe('protocol', function() {
       // check
       var rule = _.find(rules, function(item) {
 
-        return item.key == 'duplicate.protocol';
+        return item.key == 'duplicate.error';
+
+      });
+
+      // check if we found it
+      if(!rule)
+        assert.fail('Was was expecting a rule to return');
+
+      // done
+      done();
+
+    });
+
+  });
+
+  // handle the error output
+  it('Should return if http:// is being served too while accessing with https://', function(done) {
+
+    // handle the payload
+    var payload = passmarked.createPayload({
+
+      url:                'https://example.com',
+      testingStatusCode:  200,
+      testingRequestUrl:  'http://example.com'
+
+    }, null, '')
+
+    // run the rules
+    testFunc(payload, function(err) {
+
+      // check for a error
+      if(err)
+        assert.fail('Was not expecting a error');
+
+      // get the rules
+      var rules = payload.getRules();
+
+      // check
+      var rule = _.find(rules, function(item) {
+
+        return item.key == 'duplicate';
 
       });
 
@@ -54,7 +95,8 @@ describe('protocol', function() {
     var payload = passmarked.createPayload({
 
       url:                'http://example.com',
-      testingStatusCode:  200
+      testingStatusCode:  200,
+      testingRequestUrl:  'https://example.com'
 
     }, null, '')
 
@@ -71,7 +113,7 @@ describe('protocol', function() {
       // check
       var rule = _.find(rules, function(item) {
 
-        return item.key == 'duplicate.protocol';
+        return item.key == 'duplicate';
 
       });
 
@@ -87,13 +129,14 @@ describe('protocol', function() {
   });
 
   // handle the error output
-  it('Should not return a error when we are redirected to https:// [Status Code 301]', function(done) {
+  it('Should not return a error if we were redirected back to original', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
 
       url:                  'https://example.com',
-      testingStatusCode:    301
+      testingStatusCode:    200,
+      testingRequestUrl:    'https://example.com'
 
     }, null, '')
 
@@ -110,90 +153,12 @@ describe('protocol', function() {
       // check
       var rule = _.find(rules, function(item) {
 
-        return item.key == 'duplicate.protocol';
+        return item.key == 'duplicate';
 
       });
 
       // check if we found it
-      if(!rule)
-        assert.fail('Was not was expecting a rule to return');
-
-      // done
-      done();
-
-    });
-
-  });
-
-  // handle the error output
-  it('Should not return a error when we are redirected to https:// [Status Code 302]', function(done) {
-
-    // handle the payload
-    var payload = passmarked.createPayload({
-
-      url:                  'https://example.com',
-      testingStatusCode:    302
-
-    }, null, '')
-
-    // run the rules
-    testFunc(payload, function(err) {
-
-      // check for a error
-      if(err)
-        assert.fail('Was not expecting a error');
-
-      // get the rules
-      var rules = payload.getRules();
-
-      // check
-      var rule = _.find(rules, function(item) {
-
-        return item.key == 'duplicate.protocol';
-
-      });
-
-      // check if we found it
-      if(!rule)
-        assert.fail('Was not was expecting a rule to return');
-
-      // done
-      done();
-
-    });
-
-  });
-
-  // handle the error output
-  it('Should not return a error when we are redirected to https:// [Status Code 302]', function(done) {
-
-    // handle the payload
-    var payload = passmarked.createPayload({
-
-      url:                  'https://example.com',
-      testingStatusCode:    302
-
-    }, null, '')
-
-    // run the rules
-    testFunc(payload, function(err) {
-
-      // check for a error
-      if(err)
-        assert.fail('Was not expecting a error');
-
-      // get the rules
-      var rules = payload.getRules();
-
-      // check
-      var rule = _.find(rules, function(item) {
-
-        return item.key == 'duplicate.protocol';
-
-      });
-
-      // check if we found it
-      if(!rule)
+      if(rule)
         assert.fail('Was not was expecting a rule to return');
 
       // done
@@ -227,7 +192,7 @@ describe('protocol', function() {
       // check
       var rule = _.find(rules, function(item) {
 
-        return item.key == 'duplicate.protocol.http';
+        return item.key == 'duplicate.connect';
 
       });
 
@@ -266,7 +231,7 @@ describe('protocol', function() {
       // check
       var rule = _.find(rules, function(item) {
 
-        return item.key == 'duplicate.protocol.https';
+        return item.key == 'duplicate.connect';
 
       });
 
@@ -281,6 +246,7 @@ describe('protocol', function() {
 
   });
 
+  /*
   for(var index = 200; index < 400; index++) {
 
     // handle the error output
@@ -307,7 +273,7 @@ describe('protocol', function() {
         // check
         var rule = _.find(rules, function(item) {
 
-          return item.key == 'duplicate.protocol';
+          return item.key == 'duplicate.connect';
 
         });
 
@@ -350,7 +316,7 @@ describe('protocol', function() {
         // check
         var rule = _.find(rules, function(item) {
 
-          return item.key == 'duplicate.protocol.error';
+          return item.key == 'duplicate.connect.error';
 
         });
 
@@ -366,5 +332,6 @@ describe('protocol', function() {
     });
 
   }
+  */
 
 });
