@@ -1,12 +1,16 @@
 {
   "name": "@passmarked/seo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Rules related to checking for any SEO issues on the page given",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=testing mocha"
   },
   "author": "Passmarked <devops@passmarked.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:passmarked/seo.git"
+  },
   "keywords": [
     "html",
     "passmarked",
