@@ -9,7 +9,7 @@ const testFunc      = require('../lib/rules/canonical');
 describe('canonical', function() {
 
   // handle the error output
-  it('should report a error if there is no canonical', function(done) {
+  it('should not report a error if there is no canonical', function(done) {
 
     // read in the html sample
     var content = fs.readFileSync('./samples/canonical.none.html').toString();
@@ -39,8 +39,8 @@ describe('canonical', function() {
       });
 
       // check if we found it
-      if(!rule)
-        assert.fail('Should report a error if no canonical was given for the page');
+      if(rule)
+        assert.fail('Should not expecting a error');
 
       // done
       done();
