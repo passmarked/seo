@@ -21,10 +21,12 @@ The rules checked in this module are:
 * **description.length** - The length of the content in the description meta tag was more than 160
 * **description.missing** - No description meta tags found on the page
 * **description.location** - Description meta tag was found, but not in the head of the page
-* **duplicate.protocol** - Both the http:// and https:// versions of the page are presenting content
-* **duplicate.protocol.error** - Either the http:// or https:// version of the page returned a status code between 400 and 600
-* **duplicate.protocol.http** - Returned when http:// is not configured while running a https:// page.
-* **duplicate.protocol.https** - Returned when https:// is not configured while running a http:// page.
+* **alias.connect** - Unable to connect to www. or the naked domain if applicable.
+* **alias** - Both the www. and naked domain version of the page are serving, these needs to redirect to the same url.
+* **alias.error** - The alias of the page, being either www. or the naked domain, returns a status code between 400 and 600
+* **duplicate.connect** - Unable to connect to alternative version of the page over either http:// or https://
+* **duplicate** - Both the http:// and https:// versions of the page are presenting content
+* **duplicate.error** - Either the http:// or https:// version of the page returned a status code between 400 and 600
 * **noindex** - The page has marked "noindex" in either the **robots** or **googlebot** meta option.
 * **robots** - The robots file blocked all of the bots configured for this module, see [Robots](#robots) for list of known user agents.
 * **robots.facebook** - The bot from Facebook that generates previews has been blocked.
