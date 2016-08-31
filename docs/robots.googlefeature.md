@@ -1,8 +1,10 @@
-Page is blocked for any search indexing by `Googlebot Mobile`. This prevents google to from indexing the page and makes it difficult for people to find it via a google search.
+Page is blocked for any search indexing by `Googlebot Mobile`. This prevents Google from indexing the page and makes it difficult for people to find it via a google search.
+
+The specific user agent is used to crawl sites for feature phones.
 
 # How do I fix this ?
 
-Make sure there is nothing in the ```robots.txt``` file that this is disallowing the Googlebot-Mobile bot.
+Make sure there is nothing in the ```robots.txt``` file that is disallowing the Googlebot-Mobile bot.
 
 ```
 User-agent: Googlebot-Mobile
