@@ -1,8 +1,8 @@
-Descriptions in HTML5 documents are like the Highlander, there may be only one. They are not like agent Smith, but more like Neo. According to W3C: `There must not be more than one meta element with its name attribute set to the value description per document.`
+Description's in HTML5 documents are like the Highlander, there may be only one. They are not like agent Smith, but more like Neo. According to W3C: `There must not be more than one meta element with its name attribute set to the value description per document.`
 
 ```
 <head>
-	<meta name="description" content="Some content of less than 160 characters that does a great job of describing your search engine listing"></title>
+	<meta name="description" content="Some content of less than 160 characters that does a great job of describing your search engine listing"></meta>
 </head>
 ```
 

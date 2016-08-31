@@ -4,7 +4,7 @@ These descriptions have to be in the page header.
 
 ```
 <head>
-	<meta name="description" content="Your relevant description done in under 160 characters"/></title>
+	<meta name="description" content="Your relevant description done in under 160 characters"/></meta>
 </head>
 ```
 

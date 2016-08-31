@@ -2,7 +2,7 @@ Document description tag should be between 20 and 300 characters. Meta descripti
 
 ```
 <head>
-<meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+  <meta name="description" content="This is an example of a meta description. This will often show up in search results."></meta>
 </head>
 ```
 
