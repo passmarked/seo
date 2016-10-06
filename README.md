@@ -37,6 +37,10 @@ The rules checked in this module are:
 * **robots.msnbotmedia** - The bot from Bing that indexes images and videos to be searched has been blocked.
 * **robots.adidxbot** - The bot that Bing uses to crawl for ad quality purposes.
 * **robots.yahoo** - The bot from Yahoo that indexes sites to be searched has been blocked.
+* **sitemap.format** - The sitemap.xml returned was not text/xml or application/xml
+* **sitemap.invalid** - The returned sitemap.xml could not be parsed as XML
+* **sitemap.schema** - The defined schema for sitemap.xml was not valid according to spec
+* **sitemap.prolog** - The sitemap has either no prolog or a misconfigured prolog specified
 
 ## Robots
 

@@ -33,6 +33,7 @@ Valid sitemaps would appear as follows (for a example):
    </url>
 
 </urlset> 
+```
 
 with the following options, that are either required or optional:
 
