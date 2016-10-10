@@ -1,6 +1,6 @@
-Sitemaps (although not that widely used anymore but still an valid standard) allow site owners to give search engines lists of urls that might be hard to find while doing a normal crawl of the website.
+Sitemaps (although not that widely used anymore but still a valid standard) allow site owners to give search engines lists of URLs that might be hard to find while doing a normal crawl of the website.
 
-These sitemaps must be a XML file on the root of the site, namely `/sitemap.xml` that start with an valid prolog on the first line:
+These sitemaps must be an XML file on the root of the site, namely `/sitemap.xml` that start with an valid prolog on the first line:
 
 ```
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -11,7 +11,7 @@ These sitemaps must be a XML file on the root of the site, namely `/sitemap.xml`
 
 > Ideally with computers, you'd be very explicit with output and much more relaxed with input.
 
-The reason for the prolog (although optional) is that sitemaps with a explicit encoding remove any change of unexpected behaviour that might cause urls to be indexed wrong with unintended characters.
+The reason for the prolog (although optional) is that sitemaps with an explicit encoding removes any change of unexpected behaviour that might cause URLs to be indexed wrong with unintended characters.
 
 # How do I fix this ?
 
@@ -19,7 +19,7 @@ Ensure that the first line of the XML file:
 
 * Starts with `<?xml`
 * Contains the `version="1.0"` attribute
-* Contains a `encoding="UTF-8"` attribute (note UTF-8 can be changed to another encoding if required)
+* Contains an `encoding="UTF-8"` attribute (note UTF-8 can be changed to another encoding if required)
 * Ends with `?>`
 
 # Resources
