@@ -1,8 +1,8 @@
-Sitemaps (although not that widely used anymore but still an valid standard) allow site owners to give search engines lists of urls that might be hard to find while doing a normal crawl of the website.
+Sitemaps (although not that widely used anymore but still a valid standard) allow site owners to give search engines lists of URLs that might be hard to find while doing a normal crawl of the website.
 
-These sitemaps must be a XML file on the root of the site, namely `/sitemap.xml`.
+These sitemaps must be an XML file on the root of the site, namely `/sitemap.xml`.
 
-The sitemap returned by the website was empty, nada, nothing ... After parsing the file no structure could be found, this indicates a empty file. Meaning any search engines trying to parse the file will not find any urls and might even mark the sitemap parsing as a failure.
+The sitemap returned by the website was empty, nada, nothing ... After parsing the file no structure could be found, this indicates an empty file. Meaning any search engines trying to parse the file will not find any URLs and might even mark the sitemap parsing as a failure.
 
 # How do I fix this ?
 
