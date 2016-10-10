@@ -8,7 +8,7 @@ The sitemap returned by the website was empty, nada, nothing ... After parsing t
 
 Look at defining at least the bare minimum for some structure in the file, while you're at it go ahead and add some urls too.
 
-Basic structures of sitemaps as are:
+The basic structure of a sitemap is:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
