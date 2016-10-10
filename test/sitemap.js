@@ -8,8 +8,8 @@ const testFunc      = require('../lib/rules/sitemap');
 // handle the settings
 describe('sitemap', function() {
 
-  // add the test for the robot
-  it('Should not return a error if the /sitemap.xml url returned anything else than a 200', function(done) {
+  // add the test for the sitemap
+  it('Should not return an error if the /sitemap.xml url returned anything else than a 200', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -31,9 +31,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -49,8 +49,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should return a error if the sitemap returned as text/html', function(done) {
+  // add the test for the sitemap
+  it('Should return an error if the sitemap returned as text/html', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -77,9 +77,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -102,8 +102,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should not return a error if the sitemap returned as application/xml', function(done) {
+  // add the test for the sitemap
+  it('Should not return an error if the sitemap returned as application/xml', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -130,9 +130,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -155,8 +155,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should not return a error if the sitemap returned as text/xml', function(done) {
+  // add the test for the sitemap
+  it('Should not return an error if the sitemap returned as text/xml', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -183,9 +183,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -208,8 +208,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should not return a error if the prolog is correct - <?xml version="1.0" encoding="UTF-8" ?>', function(done) {
+  // add the test for the sitemap
+  it('Should not return an error if the prolog is correct - <?xml version="1.0" encoding="UTF-8" ?>', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -236,9 +236,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -261,8 +261,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should not return a error if the prolog is correct, even with spaces - <?xml version="1.0" encoding="UTF-8" ?>', function(done) {
+  // add the test for the sitemap
+  it('Should not return an error if the prolog is correct, even with spaces - <?xml version="1.0" encoding="UTF-8" ?>', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -289,9 +289,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -314,8 +314,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should return a error if the prolog is missing <?xml at the start', function(done) {
+  // add the test for the sitemap
+  it('Should return an error if the prolog is missing <?xml at the start', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -342,9 +342,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -367,8 +367,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should return a error if the prolog is missing version="1.0" at the start', function(done) {
+  // add the test for the sitemap
+  it('Should return an error if the prolog is missing version="1.0" at the start', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -395,9 +395,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -420,8 +420,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should return a error if the prolog is missing encoding=', function(done) {
+  // add the test for the sitemap
+  it('Should return an error if the prolog is missing encoding=', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -448,9 +448,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -473,8 +473,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should return a error if the prolog is missing the end tag - ?>', function(done) {
+  // add the test for the sitemap
+  it('Should return an error if the prolog is missing the end tag - ?>', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -501,9 +501,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -526,8 +526,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should not return a error if the XML is able to parse', function(done) {
+  // add the test for the sitemap
+  it('Should not return an error if the XML is able to parse', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -556,9 +556,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -581,8 +581,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should return a error if the XML is not able to parse', function(done) {
+  // add the test for the sitemap
+  it('Should return an error if the XML is not able to parse', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -611,9 +611,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -636,8 +636,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should return a error if the first node is not "urlset"', function(done) {
+  // add the test for the sitemap
+  it('Should return an error if the first node is not "urlset"', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -666,9 +666,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -691,8 +691,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should return a error if any of the children of "urlset" are not "url"', function(done) {
+  // add the test for the sitemap
+  it('Should return an error if any of the children of "urlset" are not "url"', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -724,9 +724,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -749,8 +749,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should return a error if no "<loc" is given', function(done) {
+  // add the test for the sitemap
+  it('Should return an error if no "<loc" is given', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -781,9 +781,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
@@ -806,8 +806,8 @@ describe('sitemap', function() {
 
   });
 
-  // add the test for the robot
-  it('Should return a error if a unknown property is given', function(done) {
+  // add the test for the sitemap
+  it('Should return an error if a unknown property is given', function(done) {
 
     // handle the payload
     var payload = passmarked.createPayload({
@@ -839,9 +839,9 @@ describe('sitemap', function() {
     // run the rules
     testFunc(payload, function(err) {
 
-      // check for a error
+      // check for an error
       if(err)
-        assert.fail('Was not expecting a error');
+        assert.fail('Was not expecting an error');
 
       // get the rules
       var rules = payload.getRules();
