@@ -1,6 +1,6 @@
-Sitemaps (although not that widely used anymore but still an valid standard) allow site owners to give search engines lists of urls that might be hard to find while doing a normal crawl of the website.
+Sitemaps (although not that widely used anymore but still a valid standard) allow site owners to give search engines lists of URLs that might be hard to find while doing a normal crawl of the website.
 
-These sitemaps must be a XML file on the root of the site, namely `/sitemap.xml`. The sitemap listed for the website could not be parsed as valid XML, which could lead to unexpected and even urls not being crawled.
+These sitemaps must be an XML file on the root of the site, namely `/sitemap.xml`. The sitemap listed for the website could not be parsed as valid XML, which could lead to unexpected and even urls not being crawled.
 
 # How do I fix this ?
 
