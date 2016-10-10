@@ -37,6 +37,7 @@ The rules checked in this module are:
 * **robots.msnbotmedia** - The bot from Bing that indexes images and videos to be searched has been blocked.
 * **robots.adidxbot** - The bot that Bing uses to crawl for ad quality purposes.
 * **robots.yahoo** - The bot from Yahoo that indexes sites to be searched has been blocked.
+* **slash** - Returned when the page with or without (depending on context) returns duplicate content instead of redirecting or serving unique content.
 
 ## Robots
 
