@@ -23,6 +23,7 @@ The rules checked in this module are:
 * **description.length** - The length of the content in the description meta tag was more than 160
 * **description.missing** - No description meta tags found on the page
 * **description.location** - Description meta tag was found, but not in the head of the page
+* **homepage** - Returned when a common of alias of the homepage is also being served with a 200, which would indicate duplicate content
 * **duplicate.protocol** - Both the http:// and https:// versions of the page are presenting content
 * **duplicate.protocol.error** - Either the http:// or https:// version of the page returned a status code between 400 and 600
 * **duplicate.protocol.http** - Returned when http:// is not configured while running a https:// page.
