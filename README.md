@@ -16,22 +16,21 @@ The rules checked in this module are:
 * **title.empty** - The title tag found on the page was empty, after a trim
 * **title.length** - The length of the content in the title tag was more than 70
 * **title.missing** - No title tags found on the page
+* **title.multiple** - Multiple title tags found on page
 * **title.location** - Title tag was found, but not in the head of the page
 * **description.empty** - The description meta tag found on the page was empty, after a trim
+* **description.multiple** - Multiple title tags found on page
 * **description.length** - The length of the content in the description meta tag was more than 160
 * **description.missing** - No description meta tags found on the page
 * **description.location** - Description meta tag was found, but not in the head of the page
-* **alias.connect** - Unable to connect to www. or the naked domain if applicable.
-* **alias** - Both the www. and naked domain version of the page are serving, these needs to redirect to the same url.
-* **alias.error** - The alias of the page, being either www. or the naked domain, returns a status code between 400 and 600
-* **duplicate.connect** - Unable to connect to alternative version of the page over either http:// or https://
-* **duplicate** - Both the http:// and https:// versions of the page are presenting content
-* **duplicate.error** - Either the http:// or https:// version of the page returned a status code between 400 and 600
+* **homepage** - Returned when a common of alias of the homepage is also being served with a 200, which would indicate duplicate content
+* **duplicate.protocol** - Both the http:// and https:// versions of the page are presenting content
+* **duplicate.protocol.error** - Either the http:// or https:// version of the page returned a status code between 400 and 600
+* **duplicate.protocol.http** - Returned when http:// is not configured while running a https:// page.
+* **duplicate.protocol.https** - Returned when https:// is not configured while running a http:// page.
 * **noindex** - The page has marked "noindex" in either the **robots** or **googlebot** meta option.
 * **robots** - The robots file blocked all of the bots configured for this module, see [Robots](#robots) for list of known user agents.
 * **robots.facebook** - The bot from Facebook that generates previews has been blocked.
-* **robots.google** - The bot from Google that indexes sites to be searched has been blocked.
-* **robots.googlefeature** - The bot from Google that indexes sites to be searched has been blocked.
 * **robots.google** - The bot from Google that indexes sites to be searched has been blocked.
 * **robots.googlefeature** - The bot from Google that indexes sites to be searched for feature phones has been blocked.
 * **robots.bing** - The bot from Bing that indexes sites to be searched has been blocked.
@@ -39,6 +38,11 @@ The rules checked in this module are:
 * **robots.msnbotmedia** - The bot from Bing that indexes images and videos to be searched has been blocked.
 * **robots.adidxbot** - The bot that Bing uses to crawl for ad quality purposes.
 * **robots.yahoo** - The bot from Yahoo that indexes sites to be searched has been blocked.
+* **slash** - Returned when the page with or without (depending on context) returns duplicate content instead of redirecting or serving unique content.
+* **sitemap.format** - The sitemap.xml returned was not text/xml or application/xml
+* **sitemap.invalid** - The returned sitemap.xml could not be parsed as XML
+* **sitemap.schema** - The defined schema for sitemap.xml was not valid according to spec
+* **sitemap.prolog** - The sitemap has either no prolog or a misconfigured prolog specified
 
 ## Robots
 
