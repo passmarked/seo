@@ -1,6 +1,6 @@
 {
   "name": "@passmarked/seo",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Rules related to checking for any SEO issues on the page given",
   "main": "index.js",
   "scripts": {
