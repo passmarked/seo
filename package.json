@@ -25,23 +25,23 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "async": "^1.4.2",
-    "blocked": "^1.1.0",
-    "cheerio": "^0.19.0",
-    "diff": "^3.0.1",
-    "html": "0.0.9",
+    "async": "^2.1.4",
+    "blocked": "^1.2.1",
+    "cheerio": "^0.22.0",
+    "diff": "^3.2.0",
+    "html": "1.0.0",
     "passmarked": "*",
-    "request": "^2.61.0",
+    "request": "^2.79.0",
     "robots": "^0.9.4",
-    "robots-parser": "^1.0.0",
-    "string": "^3.3.1",
-    "tldjs": "^1.6.2",
-    "ua-parser-js": "^0.7.9",
+    "robots-parser": "^1.0.1",
+    "string": "^3.3.3",
+    "tldjs": "^1.7.0",
+    "ua-parser-js": "^0.7.12",
     "underscore": "^1.8.3",
-    "winston": "^1.0.1",
+    "winston": "^2.3.0",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
-    "mocha": "^2.1.0"
+    "mocha": "^3.2.0"
   }
 }
