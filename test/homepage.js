@@ -4,13 +4,26 @@ const _             = require('underscore');
 const fs            = require('fs');
 const passmarked    = require('passmarked');
 const testFunc      = require('../lib/rules/homepage');
-const constants     = require('../lib/constants');
+const variations    = [
+
+  '/',
+  '/index.php',
+  '/home.php',
+  '/default.php',
+  '/index.html',
+  '/home.html',
+  '/default.html',
+  '/index.aspx',
+  '/home.aspx',
+  '/default.aspx'
+
+];
 
 // handle the settings
 describe('homepage', function() {
 
-  // variations we will be checking of the homepage
-  const variations = constants.VARIATIONS;
+  
+  
 
   // loop and add a test for each
   for(var i = 0; i < variations.length; i++) {
