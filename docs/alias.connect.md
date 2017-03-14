@@ -1,4 +1,6 @@
-It's common for browsers to try to prefix domain names with ```www```. Your site doesn't allow for this, so ```www.yoursite.com``` leads to a 404 error page.
+It's common for browsers to try to prefix domain names with ```www```, and vice versa.
+
+Your site doesn't allow for this, either ```www.yoursite.com``` or ```yoursite.com``` returns a error.
 
 # How do I fix this ?
 
