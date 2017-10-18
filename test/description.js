@@ -296,4 +296,45 @@ describe('description', function() {
 
   });
 
+  // handle the error output
+  it('should not give a error if the description meta tag is in <head>, even if not closed by "/>"', function(done) {
+
+    // read in the html sample
+    var content = fs.readFileSync('./samples/description.dirty.html').toString();
+
+    // handle the payload
+    var payload = passmarked.createPayload({
+
+      url: 'example.com'
+
+    }, null, content.toString())
+
+    // run the rules
+    testFunc(payload, function(err) {
+
+      // check for a error
+      if(err) 
+        assert.fail('Was not expecting a error');
+
+      // get the rules
+      var rules = payload.getRules()
+
+      // check
+      var rule = _.find(rules, function(item) {
+
+        return item.key == 'description.location';
+
+      });
+
+      // check if we found it
+      if(rule)
+        assert.fail('Was not expecting a error');
+
+      // done
+      done();
+
+    });
+
+  });
+
 });
