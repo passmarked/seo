@@ -4,7 +4,7 @@ If your titles are less than 55 characters it should display correctly in SERP's
 
 ```
 <head>
-	<title>This title is far too long so it will be truncated looking rather strange so that no human would take it seriously in the search ingine result pages and even worse you might miss out on your keyword1 or keyword2</title>
+  <title>This title is far too long so it will be truncated looking rather strange so that no human would take it seriously in the search engine result pages and even worse you might miss out on your keyword1 or keyword2</title>
 </head>
 ```
 
