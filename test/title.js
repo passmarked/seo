@@ -255,45 +255,4 @@ describe('title', function() {
 
   });
 
-  // handle the error output
-  it('should give a error if the <title> is not in <head>', function(done) {
-
-    // read in the html sample
-    var content = fs.readFileSync('./samples/title.location.html').toString();
-
-    // handle the payload
-    var payload = passmarked.createPayload({
-
-      url: 'example.com'
-
-    }, null, content.toString())
-
-    // run the rules
-    testFunc(payload, function(err) {
-
-      // check for a error
-      if(err) 
-        assert.fail('Was not expecting a error');
-
-      // get the rules
-      var rules = payload.getRules()
-
-      // check
-      var rule = _.find(rules, function(item) {
-
-        return item.key == 'title.location';
-
-      });
-
-      // check if we found it
-      if(!rule)
-        assert.fail('Was expecting a error');
-
-      // done
-      done();
-
-    });
-
-  });
-
 });
